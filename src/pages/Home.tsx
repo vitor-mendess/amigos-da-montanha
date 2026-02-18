@@ -14,7 +14,7 @@ import {
 import picoAgulhas from "../assets/locais/pico-agulhas.jpeg";
 import macicoPrateleiras from "../assets/locais/macico-prateleiras.jpeg";
 import circuitoCouto from "../assets/locais/circuito-couto.jpg";
-import pedraAltar from "../assets/locais/pedra-altar.jpg";
+import pedraAltar from "../assets/locais/pedra-altar.jpeg";
 
 export default function Home() {
   const locais = [
