@@ -50,7 +50,6 @@ export default function Home() {
 
       {/* HERO COM VÍDEO */}
       <section className="relative h-screen w-full overflow-hidden">
-
         {/* Vídeo Cloudinary */}
         <video
           autoPlay
@@ -63,6 +62,7 @@ export default function Home() {
             src="https://res.cloudinary.com/dntarsb22/video/upload/f_auto,q_auto/v1771377892/V%C3%ADdeo_Site_-_1_1_ihdfog.mp4"
             type="video/mp4"
           />
+          Seu navegador não suporta vídeos.
         </video>
 
         {/* Overlay escuro */}
@@ -87,7 +87,6 @@ export default function Home() {
             Agende sua trilha
           </a>
         </div>
-
       </section>
 
       {/* LOCAIS */}
@@ -184,6 +183,7 @@ export default function Home() {
     </>
   );
 }
+
 
 
 
