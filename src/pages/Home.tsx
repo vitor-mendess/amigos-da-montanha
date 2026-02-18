@@ -11,8 +11,8 @@ import {
 } from "react-icons/fa";
 
 // IMAGENS
-import picoAgulhas from "../assets/locais/pico-agulhas.jpg";
-import macicoPrateleiras from "../assets/locais/macico-prateleiras.jpg";
+import picoAgulhas from "../assets/locais/pico-agulhas.jpeg";
+import macicoPrateleiras from "../assets/locais/macico-prateleiras.jpeg";
 import circuitoCouto from "../assets/locais/circuito-couto.jpg";
 import pedraAltar from "../assets/locais/pedra-altar.jpg";
 
