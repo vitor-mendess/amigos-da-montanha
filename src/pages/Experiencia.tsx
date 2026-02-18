@@ -1,8 +1,8 @@
+import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {
   FaMountain,
-  FaCampground,
   FaHiking,
   FaInfoCircle,
 } from "react-icons/fa";
@@ -34,7 +34,7 @@ const trilhas: Passeio[] = [
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/5lago.jpg",
-    slug: "/experiencia/circuito-5-lagos"
+    slug: "/experiencia/circuito-5-lagos",
   },
   {
     nome: "Pedra do Sino",
@@ -98,8 +98,7 @@ const trilhas: Passeio[] = [
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/enamorados.jpg",
-    slug: "/experiencia/pedra-dos-enamorados"
-
+    slug: "/experiencia/pedra-dos-enamorados",
   },
   {
     nome: "Asa de Hermes + Rapel",
@@ -123,7 +122,7 @@ const trilhas: Passeio[] = [
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/selada.jpg",
-    slug:"/experiencia/pedra-selada"
+    slug: "/experiencia/pedra-selada",
   },
   {
     nome: "Capim Amarelo Serra Fina",
@@ -131,13 +130,9 @@ const trilhas: Passeio[] = [
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/serrafina.jpg",
-    slug: "/experiencia/capim-amarelo-serra-fina"
+    slug: "/experiencia/capim-amarelo-serra-fina",
   },
 ];
-
-/* ================= ACAMPAMENTOS ================= */
-
-const acampamentos: Passeio[] = [];
 
 /* ================= TRAVESSIAS ================= */
 
@@ -172,7 +167,7 @@ const travessias: Passeio[] = [
     dias: "2 dias",
     local: "Mantiqueira",
     imagem: "/imgs/marins2.jpg",
-    slug: "/experiencia/travessia-da-serra-fina"
+    slug: "/experiencia/travessia-da-serra-fina",
   },
   {
     nome: "Petro x Tere",
@@ -192,7 +187,7 @@ function Secao({
   itens,
 }: {
   titulo: string;
-  icon: JSX.Element;
+  icon: React.ReactNode;
   itens: Passeio[];
 }) {
   return (
@@ -289,50 +284,29 @@ export default function Experiencia() {
 
             <div className="space-y-4 text-[#3A3A3A]">
               <p>
-                Os valores de todas as trilhas já estão com o ingresso do
+                Os valores de todas as trilhas já estão com o
                 <strong> Parque Nacional do Itatiaia</strong> incluso.
               </p>
-
               <p>
                 Condições especiais para grupos, estudantes, maiores de 60 anos
                 e moradores do entorno (consultar o valor com a nossa equipe).
               </p>
-
               <p>
                 Organizamos qualquer roteiro com grupos fechados. Fale com um de
                 nossos guias para juntos elaborarem uma experiência exclusiva e
                 personalizada.
               </p>
-
               <p>
                 Para reservar sua vaga é necessário o pagamento de
                 <strong> 30%</strong>. O restante de
                 <strong> 70%</strong> deverá ser pago até 15 dias antes da trilha.
               </p>
-
-              <div className="pt-4">
-                <p className="font-semibold mb-2 text-[#1C1C1C]">
-                  Níveis das trilhas e travessias:
-                </p>
-                <ul className="flex flex-wrap gap-4">
-                  <li className="px-4 py-1 rounded-full bg-green-600 text-white">
-                    Fácil – Leve
-                  </li>
-                  <li className="px-4 py-1 rounded-full bg-yellow-400 text-black">
-                    Moderada
-                  </li>
-                  <li className="px-4 py-1 rounded-full bg-red-700 text-white">
-                    Difícil – Pesada
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       <Secao titulo="Trilhas & Experiências" icon={<FaMountain />} itens={trilhas} />
-    
       <Secao titulo="Travessias" icon={<FaHiking />} itens={travessias} />
 
       <Footer />

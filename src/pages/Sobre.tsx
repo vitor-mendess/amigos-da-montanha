@@ -36,19 +36,26 @@ export default function Sobre() {
       <Header />
 
       {/* HERO */}
-<section className="bg-[#E8D6B3] py-32">
-  <div className="max-w-6xl mx-auto px-6 text-center">
-    <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-8 text-[#1C1C1C] leading-tight">
+<section
+  className="relative py-40 bg-cover bg-center"
+  style={{ backgroundImage: `url(${heroImg})` }}
+>
+  {/* Overlay escuro */}
+  <div className="absolute inset-0 bg-black/50"></div>
+
+  <div className="relative max-w-6xl mx-auto px-6 text-center text-white">
+    <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight">
       Supere seus desafios <br /> conosco
     </h1>
 
-    <div className="w-24 h-1 bg-[#9C3F1A] mx-auto mb-8 rounded-full" />
+    <div className="w-24 h-1 bg-white mx-auto mb-8 rounded-full" />
 
     <p className="text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed">
       Para quem quer serviço de qualidade e segurança!
     </p>
   </div>
 </section>
+
 
 
 
