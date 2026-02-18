@@ -48,21 +48,28 @@ export default function Home() {
     <>
       <Header />
 
-      {/* HERO */}
-      <section className="relative h-[100vh] w-full">
+      {/* HERO COM VÍDEO */}
+      <section className="relative h-screen w-full overflow-hidden">
+
+        {/* Vídeo Cloudinary */}
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute w-full h-full object-cover z-0"
+          className="absolute w-full h-full object-cover"
         >
-          <source src="/videoo.mp4" type="video/mp4" />
+          <source
+            src="https://res.cloudinary.com/dntarsb22/video/upload/f_auto,q_auto/v1771377892/V%C3%ADdeo_Site_-_1_1_ihdfog.mp4"
+            type="video/mp4"
+          />
         </video>
 
-        <div className="absolute inset-0 bg-[#1C1C1C]/60 z-10" />
+        {/* Overlay escuro */}
+        <div className="absolute inset-0 bg-[#1C1C1C]/60"></div>
 
-        <div className="relative z-20 flex h-full flex-col justify-center max-w-2xl px-6 text-[#E8D6B3]">
+        {/* Conteúdo */}
+        <div className="relative z-10 flex h-full flex-col justify-center max-w-2xl px-6 text-[#E8D6B3]">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
             GRANDES JORNADAS <br /> COMEÇAM AQUI
           </h1>
@@ -74,11 +81,13 @@ export default function Home() {
           <a
             href="https://wa.me/5524988418212"
             target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-8 py-4 bg-[#C98A3A] text-[#1C1C1C] rounded-full font-semibold text-lg hover:bg-[#9C3F1A] hover:text-white transition"
           >
             Agende sua trilha
           </a>
         </div>
+
       </section>
 
       {/* LOCAIS */}
@@ -175,6 +184,7 @@ export default function Home() {
     </>
   );
 }
+
 
 
 
