@@ -2,16 +2,31 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { FaWhatsapp, FaMountain } from "react-icons/fa";
 import { useState } from "react";
+import { FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 
 const imagens = [
-  "/imgs/prateleiras/01.png",
-  "/imgs/prateleiras/02.png",
-  "/imgs/prateleiras/03.png",
-  "/imgs/prateleiras/04.png",
-  "/imgs/prateleiras/05.png",
+  "/imgs/prateleiras/01.jpg",
+  "/imgs/prateleiras/02.jpg",
+  "/imgs/prateleiras/03.jpg",
+  "/imgs/prateleiras/04.jpg",
+  "/imgs/prateleiras/05.jpg",
+  "/imgs/prateleiras/06.jpg",
+  "/imgs/prateleiras/07.jpg",
 ];
 
 export default function Prateleiras() {
+  const [indiceImagem, setIndiceImagem] = useState<number | null>(null);
+
+const abrirImagem = (index: number) => setIndiceImagem(index);
+const fecharImagem = () => setIndiceImagem(null);
+
+const proximaImagem = () => {
+  if (indiceImagem !== null) setIndiceImagem((indiceImagem + 1) % imagens.length);
+};
+
+const imagemAnterior = () => {
+  if (indiceImagem !== null) setIndiceImagem((indiceImagem - 1 + imagens.length) % imagens.length);
+};
   const [imagemAberta, setImagemAberta] = useState<string | null>(null);
 
   return (
@@ -22,7 +37,7 @@ export default function Prateleiras() {
       <section
         className="h-[80vh] bg-cover bg-center relative flex items-end"
         style={{
-          backgroundImage: "url('/imgs/prateleiras/home.png')",
+          backgroundImage: "url('/imgs/prateleiras/home.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black/60" />
@@ -120,13 +135,35 @@ export default function Prateleiras() {
                 <img
                   key={index}
                   src={img}
-                  alt={`Prateleiras ${index + 1}`}
-                  onClick={() => setImagemAberta(img)}
+                  alt={`Circuito 5 lagos ${index + 1}`}
+                  onClick={() => abrirImagem(index)}
                   className="cursor-pointer rounded-2xl object-cover h-64 w-full hover:scale-[1.03] transition"
                 />
               ))}
             </div>
           </div>
+          
+          {/* LIGHTBOX */}
+          {indiceImagem !== null && (
+            <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
+              <button className="absolute top-5 right-5 text-white text-3xl" onClick={fecharImagem}>
+                <FaTimes />
+              </button>
+          
+              <button className="absolute left-5 text-white text-4xl hover:text-gray-300" onClick={imagemAnterior}>
+                <FaArrowLeft />
+              </button>
+          
+              <img
+                src={imagens[indiceImagem]}
+                className="max-h-[90vh] max-w-[90vw] object-contain rounded-xl"
+              />
+          
+              <button className="absolute right-5 text-white text-4xl hover:text-gray-300" onClick={proximaImagem}>
+                <FaArrowRight />
+              </button>
+            </div>
+          )}
 
           {/* MODAL DA IMAGEM */}
           {imagemAberta && (
@@ -170,32 +207,7 @@ export default function Prateleiras() {
             </div>
           </div>
 
-          {/* VALORES */}
-          <div className="bg-white rounded-3xl p-10 shadow-md">
-            <h2 className="text-4xl font-extrabold mb-8">
-              Valores e horários
-            </h2>
-
-            <div className="space-y-4 text-lg">
-              <p>
-                <strong>Hospedagem:</strong> Itatiaia —
-                <strong> R$ 60,00</strong> (café da manhã incluso)
-              </p>
-
-              <p>
-                <strong>Horário de saída:</strong> 5h30
-              </p>
-
-              <p className="text-sm italic text-gray-600">
-                * Horário de chegada depende do grupo
-              </p>
-
-              <p>
-                <strong>Local de encontro:</strong> Rodoviária de Resende
-                (Mc Donalds), Rodoviária de Itatiaia ou local a combinar.
-              </p>
-            </div>
-          </div>
+          
 
           {/* RECOMENDAÇÕES */}
           <div>
@@ -215,6 +227,26 @@ export default function Prateleiras() {
               ))}
             </div>
           </div>
+
+          {/* VALORES E HORÁRIOS */}
+<div className="rounded-3xl p-10 shadow-md text-center bg-[#E8D6B3]">
+  <h2 className="text-4xl font-extrabold mb-6 text-[#1C1C1C]">
+    Valores e horários
+  </h2>
+
+  <p className="text-lg mb-8 text-[#1C1C1C]">
+    Clique abaixo para consultar valores, formas de pagamento e horários de saída.
+  </p>
+
+  <a
+    href="https://agenda-am.lovable.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block bg-[#9C3F1A] text-white font-bold px-8 py-3 rounded-full hover:scale-105 transition"
+  >
+    Clique aqui para saber mais
+  </a>
+</div>
 
         </div>
       </section>

@@ -1,6 +1,8 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { FaWhatsapp, FaMountain } from "react-icons/fa";
+import { useState } from "react";
+import { FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 
 const imagens = [
   "/imgs/agulhas-negras/01.jpg",
@@ -9,9 +11,41 @@ const imagens = [
   "/imgs/agulhas-negras/04.jpg",
   "/imgs/agulhas-negras/05.jpg",
   "/imgs/agulhas-negras/06.jpg",
+  "/imgs/agulhas-negras/07.jpg",
+  "/imgs/agulhas-negras/08.jpg",
+  "/imgs/agulhas-negras/09.jpg",
+  "/imgs/agulhas-negras/10.jpg",
+  "/imgs/agulhas-negras/11.jpg",
+  "/imgs/agulhas-negras/12.jpg",
+  "/imgs/agulhas-negras/13.jpg",
+  "/imgs/agulhas-negras/14.jpg",
+  "/imgs/agulhas-negras/15.jpg",
+  "/imgs/agulhas-negras/16.jpg",
+  "/imgs/agulhas-negras/17.jpg",
+  "/imgs/agulhas-negras/18.jpg",
+  "/imgs/agulhas-negras/19.jpg",
+  "/imgs/agulhas-negras/20.jpg",
+  "/imgs/agulhas-negras/21.jpg",
+  "/imgs/agulhas-negras/22.jpg",
+  "/imgs/agulhas-negras/23.jpg",
+  "/imgs/agulhas-negras/24.jpg",
+  "/imgs/agulhas-negras/25.jpg",
+  "/imgs/agulhas-negras/26.jpg",
 ];
 
 export default function AgulhasNegras() {
+  const [indiceImagem, setIndiceImagem] = useState<number | null>(null);
+
+const abrirImagem = (index: number) => setIndiceImagem(index);
+const fecharImagem = () => setIndiceImagem(null);
+
+const proximaImagem = () => {
+  if (indiceImagem !== null) setIndiceImagem((indiceImagem + 1) % imagens.length);
+};
+
+const imagemAnterior = () => {
+  if (indiceImagem !== null) setIndiceImagem((indiceImagem - 1 + imagens.length) % imagens.length);
+};
   return (
     <>
       <Header />
@@ -112,19 +146,43 @@ export default function AgulhasNegras() {
           </div>
 
           {/* GALERIA */}
-          <div>
-            <h2 className="text-4xl font-extrabold mb-10">Galeria</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {imagens.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt={`Agulhas Negras ${index + 1}`}
-                  className="rounded-2xl object-cover h-64 w-full hover:scale-[1.03] transition cursor-pointer"
-                />
-              ))}
-            </div>
-          </div>
+<div>
+  <h2 className="text-4xl font-extrabold mb-10">Galeria</h2>
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {imagens.map((img, index) => (
+      <img
+        key={index}
+        src={img}
+        alt={`Circuito Couto ${index + 1}`}
+        onClick={() => abrirImagem(index)}
+        className="cursor-pointer rounded-2xl object-cover h-64 w-full hover:scale-[1.03] transition"
+      />
+    ))}
+  </div>
+</div>
+
+{/* LIGHTBOX */}
+{indiceImagem !== null && (
+  <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
+    <button className="absolute top-5 right-5 text-white text-3xl" onClick={fecharImagem}>
+      <FaTimes />
+    </button>
+
+    <button className="absolute left-5 text-white text-4xl hover:text-gray-300" onClick={imagemAnterior}>
+      <FaArrowLeft />
+    </button>
+
+    <img
+      src={imagens[indiceImagem]}
+      className="max-h-[90vh] max-w-[90vw] object-contain rounded-xl"
+    />
+
+    <button className="absolute right-5 text-white text-4xl hover:text-gray-300" onClick={proximaImagem}>
+      <FaArrowRight />
+    </button>
+  </div>
+)}
+
 
           {/* INCLUSO / NÃO INCLUSO */}
           <div className="grid md:grid-cols-2 gap-12">
@@ -156,33 +214,6 @@ export default function AgulhasNegras() {
             </div>
           </div>
 
-          {/* VALORES E HORÁRIOS */}
-          <div className="bg-white rounded-3xl p-10 shadow-md">
-            <h2 className="text-4xl font-extrabold mb-8">
-              Valores e horários
-            </h2>
-
-            <div className="space-y-4 text-lg">
-              <p>
-                <strong>Hospedagem:</strong> Temos hospedagem em Itatiaia —
-                <strong> R$ 60,00</strong> (café da manhã incluso)
-              </p>
-
-              <p>
-                <strong>Horário de saída:</strong> 5h30
-              </p>
-
-              <p className="text-sm italic text-gray-600">
-                * Horário de chegada depende do grupo
-              </p>
-
-              <p>
-                <strong>Local de encontro:</strong> Rodoviária de Resende
-                (Estacionamento do Mc Donalds), Rodoviária de Itatiaia ou outro
-                local a combinar.
-              </p>
-            </div>
-          </div>
 
           {/* RECOMENDAÇÕES */}
           <div>
@@ -222,8 +253,31 @@ export default function AgulhasNegras() {
             </div>
           </div>
 
+
+          {/* VALORES E HORÁRIOS */}
+<div className="rounded-3xl p-10 shadow-md text-center bg-[#E8D6B3]">
+  <h2 className="text-4xl font-extrabold mb-6 text-[#1C1C1C]">
+    Valores e horários
+  </h2>
+
+  <p className="text-lg mb-8 text-[#1C1C1C]">
+    Clique abaixo para consultar valores, formas de pagamento e horários de saída.
+  </p>
+
+  <a
+    href="https://agenda-am.lovable.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block bg-[#9C3F1A] text-white font-bold px-8 py-3 rounded-full hover:scale-105 transition"
+  >
+    Clique aqui para saber mais
+  </a>
+</div>
+
         </div>
       </section>
+
+
 
       <Footer />
     </>

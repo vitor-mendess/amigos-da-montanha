@@ -1,6 +1,8 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { FaWhatsapp, FaMountain } from "react-icons/fa";
+import { useState } from "react";
+import { FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 
 const imagens = [
   "/imgs/travessia-ruy-braga/01.jpg",
@@ -9,9 +11,28 @@ const imagens = [
   "/imgs/travessia-ruy-braga/04.jpg",
   "/imgs/travessia-ruy-braga/05.jpg",
   "/imgs/travessia-ruy-braga/06.jpg",
+  "/imgs/travessia-ruy-braga/07.jpg",
+  "/imgs/travessia-ruy-braga/08.jpg",
+  "/imgs/travessia-ruy-braga/09.jpg",
+  "/imgs/travessia-ruy-braga/10.jpg",
+  "/imgs/travessia-ruy-braga/11.jpg",
+  "/imgs/travessia-ruy-braga/12.jpg",
+  "/imgs/travessia-ruy-braga/13.jpeg",
 ];
 
 export default function TravessiaRuyBraga() {
+  const [indiceImagem, setIndiceImagem] = useState<number | null>(null);
+
+const abrirImagem = (index: number) => setIndiceImagem(index);
+const fecharImagem = () => setIndiceImagem(null);
+
+const proximaImagem = () => {
+  if (indiceImagem !== null) setIndiceImagem((indiceImagem + 1) % imagens.length);
+};
+
+const imagemAnterior = () => {
+  if (indiceImagem !== null) setIndiceImagem((indiceImagem - 1 + imagens.length) % imagens.length);
+};
   return (
     <>
       <Header />
@@ -126,18 +147,43 @@ export default function TravessiaRuyBraga() {
           </div>
 
           {/* GALERIA */}
-          <div>
-            <h2 className="text-4xl font-extrabold mb-10">Galeria</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {imagens.map((img, i) => (
-                <img
-                  key={i}
-                  src={img}
-                  className="rounded-2xl h-56 w-full object-cover hover:scale-105 transition cursor-pointer"
-                />
-              ))}
-            </div>
-          </div>
+<div>
+  <h2 className="text-4xl font-extrabold mb-10">Galeria</h2>
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {imagens.map((img, index) => (
+      <img
+        key={index}
+        src={img}
+        alt={`Circuito Couto ${index + 1}`}
+        onClick={() => abrirImagem(index)}
+        className="cursor-pointer rounded-2xl object-cover h-64 w-full hover:scale-[1.03] transition"
+      />
+    ))}
+  </div>
+</div>
+
+{/* LIGHTBOX */}
+{indiceImagem !== null && (
+  <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
+    <button className="absolute top-5 right-5 text-white text-3xl" onClick={fecharImagem}>
+      <FaTimes />
+    </button>
+
+    <button className="absolute left-5 text-white text-4xl hover:text-gray-300" onClick={imagemAnterior}>
+      <FaArrowLeft />
+    </button>
+
+    <img
+      src={imagens[indiceImagem]}
+      className="max-h-[90vh] max-w-[90vw] object-contain rounded-xl"
+    />
+
+    <button className="absolute right-5 text-white text-4xl hover:text-gray-300" onClick={proximaImagem}>
+      <FaArrowRight />
+    </button>
+  </div>
+)}
+
 
           {/* INCLUSO / NÃO INCLUSO */}
           <div className="grid md:grid-cols-2 gap-12">
@@ -169,32 +215,7 @@ export default function TravessiaRuyBraga() {
             </div>
           </div>
 
-          {/* VALORES E HORÁRIOS */}
-          <div className="bg-white rounded-3xl p-10 shadow-md">
-            <h2 className="text-4xl font-extrabold mb-8">
-              Valores e horários
-            </h2>
-
-            <div className="space-y-4 text-lg">
-              <p>
-                <strong>Hospedagem:</strong> Temos hospedagem em Itatiaia —
-                <strong> R$ 60,00</strong> (café da manhã incluso)
-              </p>
-
-              <p>
-                <strong>Horário de saída:</strong> 5h30
-              </p>
-
-              <p className="text-sm italic text-gray-600">
-                * Horário de chegada depende do grupo
-              </p>
-
-              <p>
-                <strong>Local de encontro:</strong> Rodoviária de Resende
-                (Estacionamento do Mc Donalds) ou Rodoviária de Itatiaia.
-              </p>
-            </div>
-          </div>
+          
 
           {/* RECOMENDAÇÕES */}
           <div>
@@ -241,6 +262,26 @@ export default function TravessiaRuyBraga() {
               </div>
             </div>
           </div>
+
+          {/* VALORES E HORÁRIOS */}
+<div className="rounded-3xl p-10 shadow-md text-center bg-[#E8D6B3]">
+  <h2 className="text-4xl font-extrabold mb-6 text-[#1C1C1C]">
+    Valores e horários
+  </h2>
+
+  <p className="text-lg mb-8 text-[#1C1C1C]">
+    Clique abaixo para consultar valores, formas de pagamento e horários de saída.
+  </p>
+
+  <a
+    href="https://agenda-am.lovable.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block bg-[#9C3F1A] text-white font-bold px-8 py-3 rounded-full hover:scale-105 transition"
+  >
+    Clique aqui para saber mais
+  </a>
+</div>
 
         </div>
       </section>

@@ -27,6 +27,7 @@ import PedraDosEnamorados from "./pages/passeios/PedraDosEnamorados";
 import PedraSelada from "./pages/passeios/PedraSelada";
 import CapimAmarelo from "./pages/passeios/CapimAmarelo";
 import TravessiaSerraFina from "./pages/passeios/TravessiaSerraFina";
+import MarinsItaguare from "./pages/passeios/marins-x-itaguare";
 
 
 
@@ -133,6 +134,9 @@ export default function App() {
       path="/experiencia/travessia-da-serra-fina"
       element={<TravessiaSerraFina />}
     />
+
+    <Route path="/experiencia/marins-x-itaguare" element={<MarinsItaguare />} />
+
 
 
 

@@ -62,7 +62,7 @@ const trilhas: Passeio[] = [
   },
   {
     nome: "Morro do Couto",
-    nivel: "Moderada",
+    nivel: "Fácil",
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/morrocouto.jpg",
@@ -78,7 +78,7 @@ const trilhas: Passeio[] = [
   },
   {
     nome: "Pedra do Altar",
-    nivel: "Difícil",
+    nivel: "Fácil",
     dias: "2 dias",
     local: "PNI",
     imagem: "/imgs/ladob.jpg",
@@ -94,14 +94,14 @@ const trilhas: Passeio[] = [
   },
   {
     nome: "Pedra dos Enamorados",
-    nivel: "Difícil",
+    nivel: "Fácil",
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/enamorados.jpg",
     slug: "/experiencia/pedra-dos-enamorados",
   },
   {
-    nome: "Asa de Hermes + Rapel",
+    nome: "Asa de Hermes",
     nivel: "Difícil",
     dias: "1 dia",
     local: "PNI",
@@ -148,14 +148,14 @@ const travessias: Passeio[] = [
   {
     nome: "Travessia Ruy Braga",
     nivel: "Moderada",
-    dias: "1 dia",
+    dias: "2 dias",
     local: "PNI",
     imagem: "/imgs/ruybraga.jpg",
     slug: "/experiencia/travessia-ruy-braga",
   },
   {
     nome: "Travessia Serra Negra",
-    nivel: "Difícil",
+    nivel: "Moderada",
     dias: "3 dias",
     local: "PNI",
     imagem: "/imgs/serranegra.jpg",
@@ -164,7 +164,7 @@ const travessias: Passeio[] = [
   {
     nome: "Travessia da Serra Fina",
     nivel: "Difícil",
-    dias: "2 dias",
+    dias: "3 dias",
     local: "Mantiqueira",
     imagem: "/imgs/marins2.jpg",
     slug: "/experiencia/travessia-da-serra-fina",
@@ -177,6 +177,15 @@ const travessias: Passeio[] = [
     imagem: "/imgs/petrotere.jpg",
     slug: "/experiencia/petro-x-tere",
   },
+  {
+  nome: "Marins x Itaguaré",
+  nivel: "Difícil",
+  dias: "3 dias",
+  local: "Mantiqueira",
+  imagem: "/imgs/marinsitag.jpeg",
+  slug: "/experiencia/marins-x-itaguare",
+},
+
 ];
 
 /* ================= COMPONENTE SEÇÃO ================= */
@@ -261,6 +270,7 @@ export default function Experiencia() {
     <>
       <Header />
 
+      {/* HERO */}
       <section className="bg-[#E8D6B3] py-32 text-center px-6">
         <h1 className="text-5xl md:text-7xl font-extrabold mb-8">
           Experiências na Montanha
@@ -272,7 +282,17 @@ export default function Experiencia() {
         </p>
       </section>
 
-      <section className="bg-[#E8D6B3] -mt-24 pb-20 relative z-10">
+      {/* SEÇÕES DE TRILHAS */}
+      <Secao
+        titulo="Trilhas & Experiências"
+        icon={<FaMountain />}
+        itens={trilhas}
+      />
+
+      <Secao titulo="Travessias" icon={<FaHiking />} itens={travessias} />
+
+      {/* INFORMAÇÕES IMPORTANTES AGORA NO FINAL */}
+      <section className="bg-[#E8D6B3] py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="bg-white rounded-3xl shadow-xl p-10">
             <div className="flex items-center gap-3 mb-6">
@@ -284,8 +304,7 @@ export default function Experiencia() {
 
             <div className="space-y-4 text-[#3A3A3A]">
               <p>
-                Os valores de todas as trilhas já estão com o
-                <strong> Parque Nacional do Itatiaia</strong> incluso.
+                Os valores de todas trilhas dentro do PNI estão com a entrada inclusa
               </p>
               <p>
                 Condições especiais para grupos, estudantes, maiores de 60 anos
@@ -305,9 +324,6 @@ export default function Experiencia() {
           </div>
         </div>
       </section>
-
-      <Secao titulo="Trilhas & Experiências" icon={<FaMountain />} itens={trilhas} />
-      <Secao titulo="Travessias" icon={<FaHiking />} itens={travessias} />
 
       <Footer />
     </>

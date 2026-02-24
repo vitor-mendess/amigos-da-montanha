@@ -1,6 +1,8 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { FaWhatsapp, FaMountain } from "react-icons/fa";
+import { useState } from "react";
+import { FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 
 const imagens = [
   "/imgs/travessia-serra-negra/01.jpg",
@@ -12,9 +14,38 @@ const imagens = [
   "/imgs/travessia-serra-negra/07.jpg",
   "/imgs/travessia-serra-negra/08.jpg",
   "/imgs/travessia-serra-negra/09.jpg",
+  "/imgs/travessia-serra-negra/10.jpg",
+  "/imgs/travessia-serra-negra/11.jpg",
+  "/imgs/travessia-serra-negra/12.jpg",
+  "/imgs/travessia-serra-negra/13.jpg",
+  "/imgs/travessia-serra-negra/14.jpg",
+  "/imgs/travessia-serra-negra/15.jpg",
+  "/imgs/travessia-serra-negra/16.jpg",
+  "/imgs/travessia-serra-negra/17.jpg",
+  "/imgs/travessia-serra-negra/18.jpg",
+  "/imgs/travessia-serra-negra/19.jpg",
+  "/imgs/travessia-serra-negra/20.jpg",
+  "/imgs/travessia-serra-negra/21.jpg",
+  "/imgs/travessia-serra-negra/22.jpg",
+  "/imgs/travessia-serra-negra/23.jpg",
+  "/imgs/travessia-serra-negra/24.jpg",
+  "/imgs/travessia-serra-negra/25.jpg",
+
 ];
 
 export default function TravessiaSerraNegra() {
+  const [indiceImagem, setIndiceImagem] = useState<number | null>(null);
+
+const abrirImagem = (index: number) => setIndiceImagem(index);
+const fecharImagem = () => setIndiceImagem(null);
+
+const proximaImagem = () => {
+  if (indiceImagem !== null) setIndiceImagem((indiceImagem + 1) % imagens.length);
+};
+
+const imagemAnterior = () => {
+  if (indiceImagem !== null) setIndiceImagem((indiceImagem - 1 + imagens.length) % imagens.length);
+};
   return (
     <>
       <Header />
@@ -138,18 +169,43 @@ export default function TravessiaSerraNegra() {
           </div>
 
           {/* GALERIA */}
-          <div>
-            <h2 className="text-4xl font-extrabold mb-10">Galeria</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {imagens.map((img, i) => (
-                <img
-                  key={i}
-                  src={img}
-                  className="rounded-2xl h-56 w-full object-cover hover:scale-105 transition cursor-pointer"
-                />
-              ))}
-            </div>
-          </div>
+<div>
+  <h2 className="text-4xl font-extrabold mb-10">Galeria</h2>
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {imagens.map((img, index) => (
+      <img
+        key={index}
+        src={img}
+        alt={`Circuito Couto ${index + 1}`}
+        onClick={() => abrirImagem(index)}
+        className="cursor-pointer rounded-2xl object-cover h-64 w-full hover:scale-[1.03] transition"
+      />
+    ))}
+  </div>
+</div>
+
+{/* LIGHTBOX */}
+{indiceImagem !== null && (
+  <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
+    <button className="absolute top-5 right-5 text-white text-3xl" onClick={fecharImagem}>
+      <FaTimes />
+    </button>
+
+    <button className="absolute left-5 text-white text-4xl hover:text-gray-300" onClick={imagemAnterior}>
+      <FaArrowLeft />
+    </button>
+
+    <img
+      src={imagens[indiceImagem]}
+      className="max-h-[90vh] max-w-[90vw] object-contain rounded-xl"
+    />
+
+    <button className="absolute right-5 text-white text-4xl hover:text-gray-300" onClick={proximaImagem}>
+      <FaArrowRight />
+    </button>
+  </div>
+)}
+
 
           {/* INCLUSO / NÃO INCLUSO */}
           <div className="grid md:grid-cols-2 gap-12">
@@ -178,32 +234,6 @@ export default function TravessiaSerraNegra() {
             </div>
           </div>
 
-          {/* VALORES E HORÁRIOS */}
-          <div className="bg-white rounded-3xl p-10 shadow-md">
-            <h2 className="text-4xl font-extrabold mb-8">
-              Valores e horários
-            </h2>
-
-            <div className="space-y-4 text-lg">
-              <p>
-                <strong>Hospedagem:</strong> Temos hospedagem em Itatiaia —
-                <strong> R$ 60,00</strong> (café da manhã incluso)
-              </p>
-
-              <p>
-                <strong>Horário de saída:</strong> 5h30
-              </p>
-
-              <p className="text-sm italic text-gray-600">
-                * Horário de chegada depende do grupo
-              </p>
-
-              <p>
-                <strong>Local de encontro:</strong> Rodoviária de Resende
-                (Estacionamento do Mc Donalds) ou Rodoviária de Itatiaia.
-              </p>
-            </div>
-          </div>
 
           {/* RECOMENDAÇÕES */}
           <div>
@@ -250,6 +280,26 @@ export default function TravessiaSerraNegra() {
               </div>
             </div>
           </div>
+
+          {/* VALORES E HORÁRIOS */}
+<div className="rounded-3xl p-10 shadow-md text-center bg-[#E8D6B3]">
+  <h2 className="text-4xl font-extrabold mb-6 text-[#1C1C1C]">
+    Valores e horários
+  </h2>
+
+  <p className="text-lg mb-8 text-[#1C1C1C]">
+    Clique abaixo para consultar valores, formas de pagamento e horários de saída.
+  </p>
+
+  <a
+    href="https://agenda-am.lovable.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block bg-[#9C3F1A] text-white font-bold px-8 py-3 rounded-full hover:scale-105 transition"
+  >
+    Clique aqui para saber mais
+  </a>
+</div>
 
         </div>
       </section>

@@ -1,13 +1,45 @@
+"use client";
+
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 export default function Footer() {
+  const form = useRef();
+  const [status, setStatus] = useState(""); // success | error | ""
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    emailjs
+      .sendForm(
+        "service_c9y0ciw",
+        "template_n2eo2r9",
+        form.current,
+        "dX3tkBb_5g-cXxJA3"
+      )
+      .then(
+        () => {
+          setStatus("success");
+          form.current.reset();
+
+          setTimeout(() => {
+            setStatus("");
+          }, 4000);
+        },
+        () => {
+          setStatus("error");
+        }
+      );
+  };
+
   return (
     <footer className="bg-[#3F4226] text-[#E8D6B3] py-24 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
 
         {/* CONTATO */}
         <div className="space-y-6">
-          <h3 className="text-3xl font-bold tracking-wide">
-            CONTATO
-          </h3>
+          <h3 className="text-3xl font-bold tracking-wide">CONTATO</h3>
 
           <p className="text-lg">
             Quer viver uma experiência real na montanha?
@@ -30,33 +62,68 @@ export default function Footer() {
             Deixe sua mensagem
           </h3>
 
-          <form className="space-y-5">
-            {[
-              "Nome",
-              "E-mail",
-              "WhatsApp / Celular",
-              "Qual roteiro você procura?",
-            ].map((placeholder) => (
-              <input
-                key={placeholder}
-                type="text"
-                placeholder={placeholder}
-                className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A]"
-              />
-            ))}
+          <form ref={form} onSubmit={sendEmail} className="space-y-5">
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Nome"
+              required
+              className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A]"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              required
+              className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A]"
+            />
+
+            <input
+              type="text"
+              name="phone"
+              placeholder="WhatsApp / Celular"
+              className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A]"
+            />
+
+            <input
+              type="text"
+              name="linkedin"
+              placeholder="Qual roteiro você procura?"
+              className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A]"
+            />
 
             <textarea
+              name="message"
               placeholder="Mensagem"
               rows={4}
+              required
               className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A] resize-none"
             />
 
+            {/* BOTÃO */}
             <button
               type="submit"
-              className="mt-4 px-10 py-4 border-2 border-[#C98A3A] rounded-full font-semibold text-lg text-[#C98A3A] hover:bg-[#C98A3A] hover:text-[#1C1C1C] transition"
+              disabled={status === "loading"}
+              className="mt-4 px-10 py-4 border-2 border-[#C98A3A] rounded-full font-semibold text-lg text-[#C98A3A] hover:bg-[#C98A3A] hover:text-[#1C1C1C] transition disabled:opacity-50"
             >
-              Enviar mensagem
+              {status === "loading" ? "Enviando..." : "Enviar mensagem"}
             </button>
+
+            {/* MENSAGEM DE STATUS */}
+            {status === "success" && (
+              <p className="text-green-400 font-medium pt-2">
+                ✅ Mensagem enviada com sucesso!
+              </p>
+            )}
+
+            {status === "error" && (
+              <p className="text-red-400 font-medium pt-2">
+                ❌ Erro ao enviar. Tente novamente.
+              </p>
+            )}
+
           </form>
         </div>
       </div>
@@ -77,6 +144,7 @@ export default function Footer() {
     </footer>
   );
 }
+
 
 
 
