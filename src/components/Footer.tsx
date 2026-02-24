@@ -4,12 +4,14 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Footer() {
-  const form = useRef();
-  const [status, setStatus] = useState(""); // success | error | ""
+  const form = useRef<HTMLFormElement | null>(null);
+  const [status, setStatus] = useState<string>("");
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
+
+    if (!form.current) return;
 
     emailjs
       .sendForm(
@@ -21,7 +23,7 @@ export default function Footer() {
       .then(
         () => {
           setStatus("success");
-          form.current.reset();
+          form.current?.reset();
 
           setTimeout(() => {
             setStatus("");
@@ -111,7 +113,7 @@ export default function Footer() {
               {status === "loading" ? "Enviando..." : "Enviar mensagem"}
             </button>
 
-            {/* MENSAGEM DE STATUS */}
+            {/* STATUS */}
             {status === "success" && (
               <p className="text-green-400 font-medium pt-2">
                 ✅ Mensagem enviada com sucesso!
@@ -123,7 +125,6 @@ export default function Footer() {
                 ❌ Erro ao enviar. Tente novamente.
               </p>
             )}
-
           </form>
         </div>
       </div>
@@ -144,6 +145,7 @@ export default function Footer() {
     </footer>
   );
 }
+
 
 
 
