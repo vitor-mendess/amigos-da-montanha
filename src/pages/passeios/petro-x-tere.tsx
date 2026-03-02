@@ -10,7 +10,6 @@ const imagens = [
   "/imgs/petro-x-tere/03.jpg",
   "/imgs/petro-x-tere/04.jpg",
   "/imgs/petro-x-tere/05.jpg",
-  "/imgs/petro-x-tere/06.jpg",
   "/imgs/petro-x-tere/07.jpg",
   "/imgs/petro-x-tere/08.jpg",
   "/imgs/petro-x-tere/09.jpg",

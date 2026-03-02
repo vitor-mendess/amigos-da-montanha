@@ -64,12 +64,7 @@ export default function Header() {
             Depoimentos
           </Link>
 
-          <a
-            href="#blog"
-            className="text-[#E8D6B3] font-semibold uppercase tracking-wide hover:text-[#C98A3A] transition"
-          >
-            Blog
-          </a>
+
         </nav>
 
         {/* BOTÃO HAMBÚRGUER (MOBILE) */}
@@ -132,13 +127,7 @@ export default function Header() {
                 Depoimentos
               </Link>
 
-              <a
-                href="#blog"
-                onClick={() => setMenuOpen(false)}
-                className="text-[#E8D6B3] text-xl font-semibold uppercase tracking-wide hover:text-[#C98A3A] transition"
-              >
-                Blog
-              </a>
+
             </nav>
           </div>
         </div>

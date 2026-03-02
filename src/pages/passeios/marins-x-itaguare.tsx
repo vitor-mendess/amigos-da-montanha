@@ -8,6 +8,12 @@ const imagens = [
   "/imgs/marins-itaguare/01.jpeg",
   "/imgs/marins-itaguare/02.jpeg",
   "/imgs/marins-itaguare/03.jpeg",
+  "/imgs/marins-itaguare/04.jpg",
+  "/imgs/marins-itaguare/05.jpg",
+  "/imgs/marins-itaguare/06.jpg",
+  "/imgs/marins-itaguare/07.jpg",
+  "/imgs/marins-itaguare/08.jpg",
+  "/imgs/marins-itaguare/09.jpg",
 
 ];
 

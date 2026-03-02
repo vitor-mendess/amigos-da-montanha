@@ -50,7 +50,6 @@ export default function Home() {
 
       {/* HERO COM VÍDEO */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Vídeo Cloudinary */}
         <video
           autoPlay
           muted
@@ -65,10 +64,8 @@ export default function Home() {
           Seu navegador não suporta vídeos.
         </video>
 
-        {/* Overlay escuro */}
         <div className="absolute inset-0 bg-[#1C1C1C]/60"></div>
 
-        {/* Conteúdo */}
         <div className="relative z-10 flex h-full flex-col justify-center max-w-2xl px-6 text-[#E8D6B3]">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
             GRANDES JORNADAS <br /> COMEÇAM AQUI
@@ -91,35 +88,55 @@ export default function Home() {
 
       {/* LOCAIS */}
       <section className="w-full py-20 bg-[#E8D6B3]">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
-          {locais.map((local) => (
-            <div
-              key={local.id}
-              className="relative group h-[70vh] rounded-3xl overflow-hidden"
-            >
-              <img
-                src={local.img}
-                alt={local.nome}
-                className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-              />
+        <div className="max-w-7xl mx-auto px-6">
+          {/* GRID DE CARDS */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {locais.map((local) => (
+              <div
+                key={local.id}
+                className="relative group h-[70vh] rounded-3xl overflow-hidden"
+              >
+                <img
+                  src={local.img}
+                  alt={local.nome}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+                />
 
-              <div className="absolute inset-0 bg-[#1C1C1C]/55 flex flex-col justify-end p-8">
-                <h3 className="text-3xl font-bold text-[#E8D6B3] mb-4">
-                  {local.nome}
-                </h3>
+                <div className="absolute inset-0 bg-[#1C1C1C]/55 flex flex-col justify-end p-8">
+                  <h3 className="text-3xl font-bold text-[#E8D6B3] mb-4">
+                    {local.nome}
+                  </h3>
 
-                <Link
-                  to={local.link}
-                  onClick={() =>
-                    window.scrollTo({ top: 0, behavior: "smooth" })
-                  }
-                  className="inline-block px-6 py-3 border-2 border-[#E8D6B3] rounded-full text-[#E8D6B3] font-semibold hover:bg-[#E8D6B3] hover:text-[#1C1C1C] transition"
-                >
-                  Saiba mais
-                </Link>
+                  <Link
+                    to={local.link}
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
+                    className="inline-block px-6 py-3 border-2 border-[#E8D6B3] rounded-full text-[#E8D6B3] font-semibold hover:bg-[#E8D6B3] hover:text-[#1C1C1C] transition"
+                  >
+                    Saiba mais
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* CTA EXPERIÊNCIAS EM DESTAQUE */}
+          <div className="mt-24 flex flex-col items-center text-center">
+            <p className="font-bold text-3xl md:text-4xl text-[#1C1C1C] mb-8 tracking-wide">
+              Confira nossas experiências
+            </p>
+
+            <Link
+              to="/experiencia"
+              onClick={() =>
+                window.scrollTo({ top: 0, behavior: "smooth" })
+              }
+              className="px-12 py-5 bg-[#C98A3A] text-[#1C1C1C] rounded-full font-bold text-xl md:text-2xl shadow-lg hover:bg-[#9C3F1A] hover:text-white hover:scale-105 transition duration-300"
+            >
+              Explorar experiências
+            </Link>
+          </div>
         </div>
       </section>
 
