@@ -52,30 +52,28 @@ const imagemAnterior = () => {
             Marins x Itaguaré
           </h1>
 
-          {/* BOTÕES WHATSAPP */}
-    <div className="flex flex-col sm:flex-row gap-4">
+{/* BOTÕES WHATSAPP */}
+<div className="flex flex-col sm:flex-row gap-4 max-w-md">
 
+  <a
+    href="https://wa.me/5524988418212"
+    target="_blank"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition w-full"
+  >
+    <FaWhatsapp className="text-2xl" />
+    Quero participar - Roberto
+  </a>
 
-      <a
-        href="https://wa.me/5524988418212"
-        target="_blank"
-        className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition"
-      >
-        <FaWhatsapp className="text-2xl" />
-        Quero participar - Roberto
-      </a>
+  <a
+    href="https://wa.me/5524992329540"
+    target="_blank"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition w-full"
+  >
+    <FaWhatsapp className="text-2xl" />
+    Quero participar - Luis Felipe
+  </a>
 
-
-      <a
-        href="https://wa.me/5524992329540"
-        target="_blank"
-        className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition"
-      >
-        <FaWhatsapp className="text-2xl" />
-        Quero participar - Luis Felipe
-      </a>
-
-      </div>
+</div>
         </div>
       </section>
 
