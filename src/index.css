@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+/* ================= HEADER ================= */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 25px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.45);
+  z-index: 100;
+  transition: all 0.35s ease;
+}
+
+.header.scrolled {
+  background: #111827; /* Azul escuro */
+  padding: 15px 60px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+}
+
+.logo {
+  height: 65px;
+  transition: all 0.35s ease;
+}
+
+.header.scrolled .logo {
+  height: 70px;
+  transform: scale(1.05);
+}
+
+/* MENU */
+.menu a {
+  color: white;
+  margin: 0 22px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.menu a:hover {
+  opacity: 0.85;
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  max-width: 800px;
+  padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  margin-bottom: 35px;
+}
+
+/* CTA */
+.hero-cta {
+  display: inline-block;
+  background: #0c2c4a;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 40px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.hero-cta:hover {
+  background: #143d66;
+}
+
+/* REDES SOCIAIS NO VÍDEO */
+.social-fixed {
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-fixed a {
+  color: white;
+  margin: 10px 0;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-fixed a:hover {
+  transform: scale(1.15);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .menu {
+    display: none;
+  }
+
+  .hero-content {
+    padding-left: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+}
+
+
+
