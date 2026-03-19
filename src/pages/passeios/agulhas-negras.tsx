@@ -137,7 +137,7 @@ const imagemAnterior = () => {
           {/* DADOS DA TRILHA */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
-              { valor: "11km", label: "Distância" },
+              { valor: "6km", label: "Distância" },
               { valor: "2792m", label: "Altitude" },
               { valor: "8h", label: "Duração" },
               { valor: "Médio", label: "Esforço" },

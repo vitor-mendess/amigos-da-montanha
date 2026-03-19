@@ -316,9 +316,12 @@ export default function Experiencia() {
                 personalizada.
               </p>
               <p>
-                Para reservar sua vaga é necessário o pagamento de
-                <strong> 30%</strong>. O restante de
-                <strong> 70%</strong> deverá ser pago até 15 dias antes da trilha.
+                Para reservar sua vaga é necessário o pagamento
+                de 30% do valor. O restante de 70% deverá ser pago
+                em parcelas mensais e iguais até 15 dias antes da
+                trilha, podendo ser parcelado no pix ou boleto
+                bancário (sem juros) ou no cartão de crédito em até
+                12x (com taxas e juros)
               </p>
             </div>
           </div>

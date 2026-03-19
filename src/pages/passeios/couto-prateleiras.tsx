@@ -5,7 +5,6 @@ import { useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 
 const imagens = [
-  "/imgs/couto_prateleiras/01.jpg",
   "/imgs/couto_prateleiras/02.jpg",
   "/imgs/couto_prateleiras/03.jpg",
   "/imgs/couto_prateleiras/04.jpg",
