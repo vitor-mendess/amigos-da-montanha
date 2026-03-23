@@ -18,6 +18,12 @@ const imagens = [
   "/imgs/pedra-selada/11.jpg",
   "/imgs/pedra-selada/12.jpg",
   "/imgs/pedra-selada/13.jpg",
+  "/imgs/pedra-selada/14.jpg",
+  "/imgs/pedra-selada/15.jpg",
+  "/imgs/pedra-selada/16.jpg",
+  "/imgs/pedra-selada/18.jpg",
+  "/imgs/pedra-selada/19.jpg",
+  "/imgs/pedra-selada/20.jpg",
 ];
 
 export default function PedraSelada() {
@@ -58,26 +64,24 @@ const imagemAnterior = () => {
           </h1>
 
 {/* BOTÕES WHATSAPP */}
-<div className="flex flex-col sm:flex-row gap-4 max-w-md">
-
+<div className="flex flex-col sm:flex-row gap-4 max-w-none">
   <a
     href="https://wa.me/5524988418212"
     target="_blank"
-    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition w-full"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
   >
     <FaWhatsapp className="text-2xl" />
-    Quero participar - Roberto
+    <span>Quero participar - Roberto</span>
   </a>
 
   <a
     href="https://wa.me/5524992329540"
     target="_blank"
-    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition w-full"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
   >
     <FaWhatsapp className="text-2xl" />
-    Quero participar - Luis Felipe
+    <span>Quero participar - Luis Felipe</span>
   </a>
-
 </div>
         </div>
       </section>

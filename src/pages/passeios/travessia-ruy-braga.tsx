@@ -18,6 +18,13 @@ const imagens = [
   "/imgs/travessia-ruy-braga/11.jpg",
   "/imgs/travessia-ruy-braga/12.jpg",
   "/imgs/travessia-ruy-braga/13.jpeg",
+  "/imgs/travessia-ruy-braga/14.jpg",
+  "/imgs/travessia-ruy-braga/15.jpg",
+  "/imgs/travessia-ruy-braga/16.jpg",
+  "/imgs/travessia-ruy-braga/17.jpg",
+  "/imgs/travessia-ruy-braga/18.jpg",
+  "/imgs/travessia-ruy-braga/19.jpg",
+  "/imgs/travessia-ruy-braga/20.jpg",
 ];
 
 export default function TravessiaRuyBraga() {
@@ -55,30 +62,26 @@ const imagemAnterior = () => {
             Ruy Braga
           </h1>
 
-          {/* BOTÕES WHATSAPP */}
-    <div className="flex flex-col sm:flex-row gap-4">
+{/* BOTÕES WHATSAPP */}
+<div className="flex flex-col sm:flex-row gap-4 max-w-none">
+  <a
+    href="https://wa.me/5524988418212"
+    target="_blank"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
+  >
+    <FaWhatsapp className="text-2xl" />
+    <span>Quero participar - Roberto</span>
+  </a>
 
-
-      <a
-        href="https://wa.me/5524988418212"
-        target="_blank"
-        className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition"
-      >
-        <FaWhatsapp className="text-2xl" />
-        Quero participar - Roberto
-      </a>
-
-
-      <a
-        href="https://wa.me/5524992329540"
-        target="_blank"
-        className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition"
-      >
-        <FaWhatsapp className="text-2xl" />
-        Quero participar - Luis Felipe
-      </a>
-
-      </div>
+  <a
+    href="https://wa.me/5524992329540"
+    target="_blank"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
+  >
+    <FaWhatsapp className="text-2xl" />
+    <span>Quero participar - Luis Felipe</span>
+  </a>
+</div>
         </div>
       </section>
 

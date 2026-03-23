@@ -5,11 +5,22 @@ import { useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 
 const imagens = [
+  "/imgs/prateleiras/01.jpg",
+  "/imgs/prateleiras/02.jpg",
   "/imgs/prateleiras/03.jpg",
   "/imgs/prateleiras/04.jpg",
   "/imgs/prateleiras/05.jpg",
   "/imgs/prateleiras/06.jpg",
   "/imgs/prateleiras/07.jpg",
+  "/imgs/prateleiras/08.jpg",
+  "/imgs/prateleiras/09.jpg",
+  "/imgs/prateleiras/10.jpg",
+  "/imgs/prateleiras/11.jpg",
+  "/imgs/prateleiras/12.jpg",
+  "/imgs/prateleiras/13.jpg",
+  "/imgs/prateleiras/14.jpg",
+  "/imgs/prateleiras/15.jpg",
+ 
 ];
 
 export default function Prateleiras() {
@@ -48,30 +59,26 @@ const imagemAnterior = () => {
             Prateleiras
           </h1>
 
-          {/* BOTÕES WHATSAPP */}
-    <div className="flex flex-col sm:flex-row gap-4">
+{/* BOTÕES WHATSAPP */}
+<div className="flex flex-col sm:flex-row gap-4 max-w-none">
+  <a
+    href="https://wa.me/5524988418212"
+    target="_blank"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
+  >
+    <FaWhatsapp className="text-2xl" />
+    <span>Quero participar - Roberto</span>
+  </a>
 
-
-      <a
-        href="https://wa.me/5524988418212"
-        target="_blank"
-        className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition"
-      >
-        <FaWhatsapp className="text-2xl" />
-        Quero participar - Roberto
-      </a>
-
-
-      <a
-        href="https://wa.me/5524992329540"
-        target="_blank"
-        className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition"
-      >
-        <FaWhatsapp className="text-2xl" />
-        Quero participar - Luis Felipe
-      </a>
-
-      </div>
+  <a
+    href="https://wa.me/5524992329540"
+    target="_blank"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
+  >
+    <FaWhatsapp className="text-2xl" />
+    <span>Quero participar - Luis Felipe</span>
+  </a>
+</div>
         </div>
       </section>
 

@@ -89,7 +89,7 @@ const trilhas: Passeio[] = [
     nivel: "Moderada",
     dias: "1 dia",
     local: "PNI",
-    imagem: "/imgs/chapadalua.png",
+    imagem: "/imgs/chapadalua.jpg",
     slug: "/experiencia/chapada-da-lua",
   },
   {

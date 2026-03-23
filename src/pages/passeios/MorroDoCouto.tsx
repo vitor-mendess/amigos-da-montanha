@@ -5,8 +5,7 @@ import { useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 
 const imagens = [
-  "/imgs/morrodocouto/01.jpg",
-  "/imgs/morrodocouto/02.jpg",
+
   "/imgs/morrodocouto/03.jpg",
   "/imgs/morrodocouto/04.jpg",
   "/imgs/morrodocouto/05.jpg",
@@ -16,9 +15,7 @@ const imagens = [
   "/imgs/morrodocouto/09.jpg",
   "/imgs/morrodocouto/10.jpg",
   "/imgs/morrodocouto/11.jpg",
-  "/imgs/morrodocouto/12.jpg",
-  "/imgs/morrodocouto/13.jpg",
-  "/imgs/morrodocouto/14.jpg",
+
 ];
 
 export default function MorroDoCouto() {
@@ -45,7 +42,7 @@ const imagemAnterior = () => {
       <section
         className="h-[80vh] bg-cover bg-center relative flex items-end"
         style={{
-          backgroundImage: "url('/imgs/morrodocouto/hero.jpg')",
+          backgroundImage: "url('/imgs/morrodocouto/hero1.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black/60" />
@@ -59,26 +56,24 @@ const imagemAnterior = () => {
           </h1>
 
 {/* BOTÕES WHATSAPP */}
-<div className="flex flex-col sm:flex-row gap-4 max-w-md">
-
+<div className="flex flex-col sm:flex-row gap-4 max-w-none">
   <a
     href="https://wa.me/5524988418212"
     target="_blank"
-    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition w-full"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
   >
     <FaWhatsapp className="text-2xl" />
-    Quero participar - Roberto
+    <span>Quero participar - Roberto</span>
   </a>
 
   <a
     href="https://wa.me/5524992329540"
     target="_blank"
-    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition w-full"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
   >
     <FaWhatsapp className="text-2xl" />
-    Quero participar - Luis Felipe
+    <span>Quero participar - Luis Felipe</span>
   </a>
-
 </div>
         </div>
       </section>

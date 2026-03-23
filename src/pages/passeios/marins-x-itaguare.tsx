@@ -5,15 +5,19 @@ import { useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 
 const imagens = [
-  "/imgs/marins-itaguare/01.jpeg",
-  "/imgs/marins-itaguare/02.jpeg",
-  "/imgs/marins-itaguare/03.jpeg",
-  "/imgs/marins-itaguare/04.jpg",
+  "/imgs/marins-itaguare/01.jpg",
+  "/imgs/marins-itaguare/02.jpg",
+  "/imgs/marins-itaguare/03.jpg",
   "/imgs/marins-itaguare/05.jpg",
   "/imgs/marins-itaguare/06.jpg",
   "/imgs/marins-itaguare/07.jpg",
   "/imgs/marins-itaguare/08.jpg",
   "/imgs/marins-itaguare/09.jpg",
+  "/imgs/marins-itaguare/10.jpg",
+  "/imgs/marins-itaguare/11.jpg",
+  "/imgs/marins-itaguare/12.jpg",
+  "/imgs/marins-itaguare/13.jpg",
+  "/imgs/marins-itaguare/14.jpg",
 
 ];
 
@@ -53,26 +57,24 @@ const imagemAnterior = () => {
           </h1>
 
 {/* BOTÕES WHATSAPP */}
-<div className="flex flex-col sm:flex-row gap-4 max-w-md">
-
+<div className="flex flex-col sm:flex-row gap-4 max-w-none">
   <a
     href="https://wa.me/5524988418212"
     target="_blank"
-    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition w-full"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
   >
     <FaWhatsapp className="text-2xl" />
-    Quero participar - Roberto
+    <span>Quero participar - Roberto</span>
   </a>
 
   <a
     href="https://wa.me/5524992329540"
     target="_blank"
-    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition w-full"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
   >
     <FaWhatsapp className="text-2xl" />
-    Quero participar - Luis Felipe
+    <span>Quero participar - Luis Felipe</span>
   </a>
-
 </div>
         </div>
       </section>

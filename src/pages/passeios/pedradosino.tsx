@@ -11,16 +11,10 @@ const imagens = [
   "/imgs/pedra-do-sino/04.jpg",
   "/imgs/pedra-do-sino/05.jpg",
   "/imgs/pedra-do-sino/06.jpg",
-  "/imgs/pedra-do-sino/07.png",
-  "/imgs/pedra-do-sino/08.png",
-  "/imgs/pedra-do-sino/09.png",
-  "/imgs/pedra-do-sino/10.jpg",
-  "/imgs/pedra-do-sino/11.jpg",
-  "/imgs/pedra-do-sino/12.jpg",
-  "/imgs/pedra-do-sino/13.jpg",
-  "/imgs/pedra-do-sino/14.jpg",
-  "/imgs/pedra-do-sino/15.jpg",
-  "/imgs/pedra-do-sino/16.jpg",
+  "/imgs/pedra-do-sino/07.jpg",
+  "/imgs/pedra-do-sino/08.jpg",
+  "/imgs/pedra-do-sino/09.jpg",
+
 ];
 
 export default function PedraDoSino() {
@@ -60,26 +54,24 @@ const imagemAnterior = () => {
           </h1>
 
 {/* BOTÕES WHATSAPP */}
-<div className="flex flex-col sm:flex-row gap-4 max-w-md">
-
+<div className="flex flex-col sm:flex-row gap-4 max-w-none">
   <a
     href="https://wa.me/5524988418212"
     target="_blank"
-    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition w-full"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
   >
     <FaWhatsapp className="text-2xl" />
-    Quero participar - Roberto
+    <span>Quero participar - Roberto</span>
   </a>
 
   <a
     href="https://wa.me/5524992329540"
     target="_blank"
-    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition w-full"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
   >
     <FaWhatsapp className="text-2xl" />
-    Quero participar - Luis Felipe
+    <span>Quero participar - Luis Felipe</span>
   </a>
-
 </div>
         </div>
       </section>

@@ -17,18 +17,7 @@ const imagens = [
   "/imgs/agulhas-negras/11.jpg",
   "/imgs/agulhas-negras/12.jpg",
   "/imgs/agulhas-negras/13.jpg",
-  "/imgs/agulhas-negras/14.jpg",
-  "/imgs/agulhas-negras/15.jpg",
-  "/imgs/agulhas-negras/16.jpg",
-  "/imgs/agulhas-negras/17.jpg",
-  "/imgs/agulhas-negras/19.jpg",
-  "/imgs/agulhas-negras/20.jpg",
-  "/imgs/agulhas-negras/21.jpg",
-  "/imgs/agulhas-negras/22.jpg",
-  "/imgs/agulhas-negras/23.jpg",
-  "/imgs/agulhas-negras/24.jpg",
-  "/imgs/agulhas-negras/25.jpg",
-  "/imgs/agulhas-negras/26.jpg",
+
 ];
 
 export default function AgulhasNegras() {
@@ -67,26 +56,24 @@ const imagemAnterior = () => {
           </h1>
 
 {/* BOTÕES WHATSAPP */}
-<div className="flex flex-col sm:flex-row gap-4 max-w-md">
-
+<div className="flex flex-col sm:flex-row gap-4 max-w-none">
   <a
     href="https://wa.me/5524988418212"
     target="_blank"
-    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition w-full"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
   >
     <FaWhatsapp className="text-2xl" />
-    Quero participar - Roberto
+    <span>Quero participar - Roberto</span>
   </a>
 
   <a
     href="https://wa.me/5524992329540"
     target="_blank"
-    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition w-full"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
   >
     <FaWhatsapp className="text-2xl" />
-    Quero participar - Luis Felipe
+    <span>Quero participar - Luis Felipe</span>
   </a>
-
 </div>
         </div>
       </section>

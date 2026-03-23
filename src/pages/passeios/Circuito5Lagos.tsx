@@ -6,13 +6,15 @@ import { FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 
 const imagens = [
 
+  "/imgs/5lagos/01.jpg",
+  "/imgs/5lagos/02.jpg",
   "/imgs/5lagos/03.jpg",
-
+  "/imgs/5lagos/04.jpg",
   "/imgs/5lagos/05.jpg",
   "/imgs/5lagos/06.jpg",
-  "/imgs/5lagos/07.JPG",
-  "/imgs/5lagos/08.JPG",
-  "/imgs/5lagos/09.JPG"
+  "/imgs/5lagos/07.jpg",
+  "/imgs/5lagos/08.jpg",
+  "/imgs/5lagos/09.jpg",
 ];
 
 export default function Circuito5Lagos() {
@@ -52,26 +54,24 @@ const imagemAnterior = () => {
             Circuito 5 Lagos
           </h1>
 {/* BOTÕES WHATSAPP */}
-<div className="flex flex-col sm:flex-row gap-4 max-w-md">
-
+<div className="flex flex-col sm:flex-row gap-4 max-w-none">
   <a
     href="https://wa.me/5524988418212"
     target="_blank"
-    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition w-full"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
   >
     <FaWhatsapp className="text-2xl" />
-    Quero participar - Roberto
+    <span>Quero participar - Roberto</span>
   </a>
 
   <a
     href="https://wa.me/5524992329540"
     target="_blank"
-    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transition w-full"
+    className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-10 py-3 rounded-full text-lg font-bold transition w-full sm:w-auto whitespace-nowrap"
   >
     <FaWhatsapp className="text-2xl" />
-    Quero participar - Luis Felipe
+    <span>Quero participar - Luis Felipe</span>
   </a>
-
 </div>
         </div>
       </section>
