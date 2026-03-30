@@ -255,6 +255,31 @@ const imagemAnterior = () => {
             </div>
           </div>
 
+          {/* SERVIÇOS EXTRAS */}
+          <div className="bg-white rounded-3xl p-8 shadow-md border-l-8 border-[#9C3F1A]">
+            <h2 className="text-3xl font-extrabold mb-4 text-[#1C1C1C]">
+              Serviços extras
+            </h2>
+
+            <p className="text-lg leading-relaxed text-[#1C1C1C]">
+              Para proporcionar mais conforto e segurança durante a travessia,
+              também oferecemos <strong>aluguel de equipamentos de camping</strong>
+            </p>
+
+            <p className="text-lg leading-relaxed text-[#1C1C1C] mt-4">
+              Além disso, contamos com serviço de
+              <strong> porteamento</strong>, ideal para quem deseja realizar a
+              experiência com menos peso na mochila e maior conforto durante a
+              caminhada.
+            </p>
+
+            <p className="text-lg leading-relaxed text-[#1C1C1C] mt-4">
+              Entre em contato conosco para consultar
+              <strong> disponibilidade, valores e reservas antecipadas</strong>.
+            </p>
+          </div>
+
+
 
           {/* RECOMENDAÇÕES */}
           <div>

@@ -7,7 +7,6 @@ import { FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 const imagens = [
   "/imgs/chapada-da-lua/01.png",
   "/imgs/chapada-da-lua/02.png",
-  "/imgs/chapada-da-lua/03.jpg",
   "/imgs/chapada-da-lua/04.jpg",
   "/imgs/chapada-da-lua/05.jpg",
   "/imgs/chapada-da-lua/06.png",

@@ -191,7 +191,7 @@ const imagemAnterior = () => {
                 <li>Consultoria técnica</li>
                 <li>Guia</li>
                 <li>Transporte</li>
-                <li>Entrada do Parque</li>
+                <li>Ingresso da trilha</li>
                 <li>Seguro Aventura</li>
               </ul>
             </div>
