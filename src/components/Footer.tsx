@@ -66,43 +66,43 @@ export default function Footer() {
 
           <form ref={form} onSubmit={sendEmail} className="space-y-5">
 
-            <input
-              type="text"
-              name="name"
-              placeholder="Nome"
-              required
-              className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A]"
-            />
+<input
+  type="text"
+  name="nome"
+  placeholder="Nome"
+  required
+  className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A]"
+/>
 
-            <input
-              type="email"
-              name="email"
-              placeholder="E-mail"
-              required
-              className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A]"
-            />
+<input
+  type="email"
+  name="email"
+  placeholder="E-mail"
+  required
+  className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A]"
+/>
 
-            <input
-              type="text"
-              name="phone"
-              placeholder="WhatsApp / Celular"
-              className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A]"
-            />
+<input
+  type="text"
+  name="telefone"
+  placeholder="WhatsApp / Celular"
+  className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A]"
+/>
 
-            <input
-              type="text"
-              name="linkedin"
-              placeholder="Qual roteiro você procura?"
-              className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A]"
-            />
+<input
+  type="text"
+  name="roteiro"
+  placeholder="Qual roteiro você procura?"
+  className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A]"
+/>
 
-            <textarea
-              name="message"
-              placeholder="Mensagem"
-              rows={4}
-              required
-              className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A] resize-none"
-            />
+<textarea
+  name="mensagem"
+  placeholder="Mensagem"
+  rows={4}
+  required
+  className="w-full bg-transparent border border-[#E8D6B3]/50 px-4 py-3 rounded-md focus:outline-none focus:border-[#C98A3A] resize-none"
+/>
 
             {/* BOTÃO */}
             <button

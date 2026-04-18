@@ -75,15 +75,27 @@ export default function Home() {
             Experiências autênticas na montanha, com segurança e conexão real.
           </p>
 
-          <a
-            href="https://wa.me/5524988418212"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-4 bg-[#C98A3A] text-[#1C1C1C] rounded-full font-semibold text-lg hover:bg-[#9C3F1A] hover:text-white transition"
-          >
-            Agende sua trilha
-          </a>
-        </div>
+<div className="flex flex-col sm:flex-row gap-4">
+  <a
+    href="https://wa.me/5524988418212"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block px-10 py-3 bg-[#C98A3A] text-[#1C1C1C] rounded-full font-semibold text-lg hover:bg-[#9C3F1A] hover:text-white transition text-center"
+  >
+    Agende sua trilha - Roberto
+  </a>
+
+  <a
+    href="https://wa.me/5524988418212"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block px-10 py-3 bg-[#C98A3A] text-[#1C1C1C] rounded-full font-semibold text-lg hover:bg-[#9C3F1A] hover:text-white transition text-center"
+  >
+    Agende sua trilha - Luiz Felipe
+  </a>
+</div>
+</div>
+
       </section>
 
       {/* LOCAIS */}

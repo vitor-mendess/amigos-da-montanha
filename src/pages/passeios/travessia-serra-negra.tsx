@@ -69,7 +69,7 @@ const imagemAnterior = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 text-white">
           <span className="inline-flex items-center gap-2 bg-[#9C3F1A] px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            <FaMountain /> Travessia • 2 dias • 30km
+            <FaMountain /> Moderada Leve • 2 dias • 30km
           </span>
 
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6">

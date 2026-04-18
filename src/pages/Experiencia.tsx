@@ -8,11 +8,12 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-type Nivel = "Fácil" | "Moderada" | "Difícil";
+type Nivel = "Fácil" | "Moderada Leve" | "Moderada Superior" | "Difícil";
 
 const nivelColor = {
   Fácil: "bg-green-600",
-  Moderada: "bg-yellow-500 text-black",
+  "Moderada Leve": "bg-yellow-500 text-black",
+  "Moderada Superior": "bg-orange-500",
   Difícil: "bg-red-700",
 };
 
@@ -38,7 +39,7 @@ const trilhas: Passeio[] = [
   },
   {
     nome: "Pedra do Sino",
-    nivel: "Moderada",
+    nivel: "Moderada Leve",
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/pedrasino.jpg",
@@ -46,7 +47,7 @@ const trilhas: Passeio[] = [
   },
   {
     nome: "Prateleiras",
-    nivel: "Moderada",
+    nivel: "Moderada Leve",
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/prateleira.jpg",
@@ -54,7 +55,7 @@ const trilhas: Passeio[] = [
   },
   {
     nome: "Circuito Couto x Prateleiras",
-    nivel: "Moderada",
+    nivel: "Fácil",
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/circuitocouto.jpg",
@@ -70,7 +71,7 @@ const trilhas: Passeio[] = [
   },
   {
     nome: "Serrilha dos Cristais",
-    nivel: "Difícil",
+    nivel: "Moderada Leve",
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/serrilha.jpg",
@@ -86,7 +87,7 @@ const trilhas: Passeio[] = [
   },
   {
     nome: "Chapada da Lua",
-    nivel: "Moderada",
+    nivel: "Moderada Leve",
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/chapadalua.jpg",
@@ -102,7 +103,7 @@ const trilhas: Passeio[] = [
   },
   {
     nome: "Asa de Hermes",
-    nivel: "Difícil",
+    nivel: "Moderada Leve",
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/asadehermes.jpg",
@@ -110,7 +111,7 @@ const trilhas: Passeio[] = [
   },
   {
     nome: "Pico das Agulhas Negras",
-    nivel: "Difícil",
+    nivel: "Moderada Superior",
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/picoagulhas.jpg",
@@ -118,7 +119,7 @@ const trilhas: Passeio[] = [
   },
   {
     nome: "Pedra Selada",
-    nivel: "Difícil",
+    nivel: "Fácil",
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/selada.jpg",
@@ -126,7 +127,7 @@ const trilhas: Passeio[] = [
   },
   {
     nome: "Capim Amarelo Serra Fina",
-    nivel: "Difícil",
+    nivel: "Moderada Superior",
     dias: "1 dia",
     local: "PNI",
     imagem: "/imgs/serrafina.jpg",
@@ -139,7 +140,7 @@ const trilhas: Passeio[] = [
 const travessias: Passeio[] = [
   {
     nome: "Travessia Rancho Caído",
-    nivel: "Difícil",
+    nivel: "Moderada Superior",
     dias: "2 dias",
     local: "PNI",
     imagem: "/imgs/ranchocaido.jpg",
@@ -147,7 +148,7 @@ const travessias: Passeio[] = [
   },
   {
     nome: "Travessia Ruy Braga",
-    nivel: "Moderada",
+    nivel: "Fácil",
     dias: "2 dias",
     local: "PNI",
     imagem: "/imgs/ruybraga.jpg",
@@ -155,7 +156,7 @@ const travessias: Passeio[] = [
   },
   {
     nome: "Travessia Serra Negra",
-    nivel: "Moderada",
+    nivel: "Moderada Leve",
     dias: "3 dias",
     local: "PNI",
     imagem: "/imgs/serranegra.jpg",
@@ -323,6 +324,10 @@ export default function Experiencia() {
                 bancário (sem juros) ou no cartão de crédito em até
                 12x (com taxas e juros)
               </p>
+               <p>
+          Temos disponível transporte próprio para grupos de até 7 pessoas.
+          Consulte valores através dos nossos canais de contato.
+        </p>
             </div>
           </div>
         </div>

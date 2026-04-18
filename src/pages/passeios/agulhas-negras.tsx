@@ -5,18 +5,12 @@ import { useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 
 const imagens = [
-  "/imgs/agulhas-negras/01.jpg",
   "/imgs/agulhas-negras/02.jpg",
-  "/imgs/agulhas-negras/03.jpg",
   "/imgs/agulhas-negras/04.jpg",
   "/imgs/agulhas-negras/05.jpg",
   "/imgs/agulhas-negras/07.jpg",
   "/imgs/agulhas-negras/08.jpg",
-  "/imgs/agulhas-negras/09.jpg",
-  "/imgs/agulhas-negras/10.jpg",
-  "/imgs/agulhas-negras/11.jpg",
-  "/imgs/agulhas-negras/12.jpg",
-  "/imgs/agulhas-negras/13.jpg",
+  "/imgs/agulhas-negras/06.jpg",
 
 ];
 
@@ -48,7 +42,7 @@ const imagemAnterior = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 text-white">
           <span className="inline-flex items-center gap-2 bg-[#9C3F1A] px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            <FaMountain /> Moderada • 1 dia • 2792m
+            <FaMountain /> Moderada Superior • 1 dia • 2792m
           </span>
 
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
