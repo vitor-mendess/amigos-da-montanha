@@ -91,7 +91,7 @@ export default function Home() {
     rel="noopener noreferrer"
     className="inline-block px-10 py-3 bg-[#C98A3A] text-[#1C1C1C] rounded-full font-semibold text-lg hover:bg-[#9C3F1A] hover:text-white transition text-center"
   >
-    Agende sua trilha - Luiz Felipe
+    Agende sua trilha - Luis Felipe
   </a>
 </div>
 </div>
