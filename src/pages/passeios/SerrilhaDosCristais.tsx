@@ -223,10 +223,6 @@ export default function SerrilhaDosCristais() {
                 <li>Seguro Aventura</li>
               </ul>
 
-              <p className="text-sm mt-6 italic text-gray-600">
-                * Temos vagas no carro para quem não possui transporte até a
-                portaria do PNI (valor para ajudar nos gastos).
-              </p>
             </div>
 
             <div className="bg-white rounded-3xl p-8 shadow-md">
@@ -240,6 +236,28 @@ export default function SerrilhaDosCristais() {
               </ul>
             </div>
           </div>
+
+          {/* TRANSPORTE */}
+<div className="bg-white rounded-3xl p-8 shadow-md border border-[#d9c29c]">
+  <h3 className="text-3xl font-bold mb-6 text-[#1C1C1C]">
+    🚗 Transporte disponível
+  </h3>
+
+  <div className="space-y-4 text-lg leading-relaxed text-[#2b2b2b]">
+    <p>
+      Agora temos transporte próprio para até 7 pessoas.
+    </p>
+
+    <p>
+      💵 Valores do transporte por pessoa.
+    </p>
+
+    <p>
+      Entre em contato para receber os valores e ajudarmos a
+      viabilizar a logística da sua experiência.
+    </p>
+  </div>
+</div>
 
          
 

@@ -18,8 +18,8 @@ const imagens = [
   "/imgs/couto_prateleiras/12.jpg",
   "/imgs/couto_prateleiras/13.jpg",
   "/imgs/couto_prateleiras/14.jpg",
-  "/imgs/couto_prateleiras/15.jpg",
-  "/imgs/couto_prateleiras/16.jpg",
+
+
   "/imgs/couto_prateleiras/17.jpg",
   "/imgs/couto_prateleiras/18.jpg",
   "/imgs/couto_prateleiras/19.jpg",
@@ -33,7 +33,7 @@ const imagens = [
   "/imgs/couto_prateleiras/27.jpg",
   "/imgs/couto_prateleiras/28.jpg",
   "/imgs/couto_prateleiras/29.jpg",
-  "/imgs/couto_prateleiras/30.jpg",
+
   "/imgs/couto_prateleiras/31.jpg",
   "/imgs/couto_prateleiras/32.jpg",
   "/imgs/couto_prateleiras/33.jpg",
@@ -215,10 +215,7 @@ const imagemAnterior = () => {
                 <li>Seguro Aventura</li>
               </ul>
 
-              <p className="text-sm mt-6 italic text-gray-600">
-                * Temos algumas vagas no nosso carro para quem não possui
-                transporte até a portaria do PNI.
-              </p>
+
             </div>
 
             <div className="bg-white rounded-3xl p-8 shadow-md">
@@ -232,6 +229,28 @@ const imagemAnterior = () => {
               </ul>
             </div>
           </div>
+
+{/* TRANSPORTE */}
+<div className="bg-white rounded-3xl p-8 shadow-md border border-[#d9c29c]">
+  <h3 className="text-3xl font-bold mb-6 text-[#1C1C1C]">
+    🚗 Transporte disponível
+  </h3>
+
+  <div className="space-y-4 text-lg leading-relaxed text-[#2b2b2b]">
+    <p>
+      Agora temos transporte próprio para até 7 pessoas.
+    </p>
+
+    <p>
+      💵 Valores do transporte por pessoa.
+    </p>
+
+    <p>
+      Entre em contato para receber os valores e ajudarmos a
+      viabilizar a logística da sua experiência.
+    </p>
+  </div>
+</div>
 
           
 
